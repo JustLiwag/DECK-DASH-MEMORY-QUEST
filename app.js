@@ -1,4 +1,4 @@
-
+// Made by Justin
 const cards = document.querySelectorAll(".memory-card");
 const score = document.getElementById("point");
 const finalScore = document.getElementById("finalPoints");
