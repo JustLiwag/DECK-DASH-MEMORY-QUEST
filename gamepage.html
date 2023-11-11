@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deck Dash: Memory Quest</title>
+  <link rel="icon" href="Images/favicon.ico">
+  <!--GOOGLE FONTS-->
+
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
+
+  <!--BOOTSTRAP-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body id="game">
+  <header>
+    <h1 class="text-center mt-4 mb-2 headTag" style="font-size: 35px; padding-top: 50px; text-shadow: 2px 2px 5px red;">
+      Deck Dash: Memory Quest</h1>
+  </header>
+
+  <section class="container mx-auto">
+    <section class="mx-auto">
+      <div class="row">
+        <div class="col-12 text-center points">
+          <p class="timeRemaining" style="margin-top: 25px;">Time: <span id="timer"></span></p>
+          <p style="font-size: 30px; margin-top: 17px;text-shadow: 2px 2px 5px red;">Your Score: <span id="point"
+              style="font-size: 35px;">
+              0</span></p>
+          <p style="font-size: 17px;">Tip: Careful! Wrong guesses deducts your score.</p>
+        </div>
+      </div>
+
+      <div id="won" class="text-center">
+        <h1 style="font-size: 25px;">Congrats! You have matched correctly!</h1>
+        <p class="scores">Total Score: <span id="finalPoints">0</span></p>
+        <button class="btn" id="playAgain">Play Again</button>
+      </div>
+      <div id="gameover" class="text-center">
+        <h1 style="font-size: 25px;">Time's Up you didn't finish... <br>GAME OVER</h1>
+        <button class="btn" id="playAgain" onclick="playAgain()">Play Again</button>
+      </div>
+      <section class="memory-game">
+        <div class="memory-card" data-cards="card1">
+          <img class="front-face" src="Images/1st.png" alt="avacado" />
+          <img class="back-face" src="Images/one.png" alt="sky" />
+        </div>
+        <div class="memory-card" data-cards="card1">
+          <img class="front-face" src="Images/1st.png" alt="avacado" />
+          <img class="back-face" src="Images/one.png" alt="sky" />
+        </div>
+
+        <div class="memory-card" data-cards="card2">
+          <img class="front-face" src="Images/2nd.png" alt="burgers" />
+          <img class="back-face" src="Images/one.png" alt="sky" />
+        </div>
+        <div class="memory-card" data-cards="card2">
+          <img class="front-face" src="Images/2nd.png" alt="burgers" />
+          <img class="back-face" src="Images/one.png" alt="sky" />
+        </div>
+
+        <div class="memory-card" data-cards="card3">
+          <img class="front-face" src="Images/3rd.jpg" alt="carrot" />
+          <img class="back-face" src="Images/one.png" alt="sky" />
+        </div>
+        <div class="memory-card" data-cards="card3">
+          <img class="front-face" src="Images/3rd.jpg" alt="carrot" />
+          <img class="back-face" src="Images/one.png" alt="sky" />
+        </div>
+
+        <div class="memory-card" data-cards="card4">
+          <img class="front-face" src="Images/4th.png" alt="cheese" />
+          <img class="back-face" src="Images/one.png" alt="sky" />
+        </div>
+        <div class="memory-card" data-cards="card4">
+          <img class="front-face" src="Images/4th.png" alt="cheese" />
+          <img class="back-face" src="Images/one.png" alt="sky" />
+        </div>
+
+        <div class="memory-card" data-cards="card5">
+          <img class="front-face" src="Images/5th.jpg" alt="pancakes" />
+          <img class="back-face" src="Images/one.png" alt="sky" />
+        </div>
+        <div class="memory-card" data-cards="card5">
+          <img class="front-face" src="Images/5th.jpg" alt="pancakes" />
+          <img class="back-face" src="Images/one.png" alt="sky" />
+        </div>
+
+        <div class="memory-card" data-cards="card6">
+          <img class="front-face" src="Images/6th.jpg" alt="salad" />
+          <img class="back-face" src="Images/one.png" alt="sky" />
+        </div>
+        <div class="memory-card" data-cards="card6">
+          <img class="front-face" src="Images/6th.jpg" alt="salad" />
+          <img class="back-face" src="Images/one.png" alt="sky" />
+        </div>
+      </section>
+    </section>
+    <a href="index.html">
+      <button class="btn btn-handle exit" style="float: right;">
+        EXIT GAME
+      </button>
+    </a>
+    <a href="gamepage.html">
+      <button class="btn btn-handle exit" style="float: left;">
+        NEW GAME
+      </button>
+    </a>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

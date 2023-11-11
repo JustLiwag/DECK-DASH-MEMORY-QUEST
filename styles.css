@@ -1,0 +1,222 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "VT323", courier;
+}
+
+body {
+  height: 100vh;
+  background-image: url("Images/back.png");
+  background-size: 100%;
+  background-position: center;
+  position: relative;
+}
+
+.open {
+  width: (100%);
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.mainTag {
+  color: wheat;
+  font-weight: bolder;
+}
+
+.welcome {
+  color: red;
+  font-weight: 800;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.btn-handle {
+  border: 2px solid red;
+  color: whitesmoke;
+}
+
+.btn-handle:hover {
+  background: linear-gradient(115.87deg, red 0%, black 100%);
+}
+
+.headTag,
+.points>p {
+  color: wheat;
+  font-weight: bolder;
+}
+
+#point {
+  font-weight: 1300;
+}
+
+.memory-game {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+  z-index: -1;
+}
+
+.memory-card {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  border-radius: 5px;
+  background-image: linear-gradient(-225deg, red 0%, black 100%);
+}
+
+.memory-card:active {
+  transform: scale(0.97);
+  transition: transform 0.2s;
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  position: absolute;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+
+#won,
+#gameover {
+  visibility: hidden;
+  border-radius: 10px;
+  background: #ffbdf1;
+  background-image: linear-gradient(to bottom, red, black 100%);
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  border: 5px solid gold;
+  color: bisque;
+  box-shadow: 1px 1px 10px 2px rgb(255, 4, 4);
+}
+
+#won>h1,
+#won p {
+  font-weight: bolder;
+  color: whitesmoke;
+}
+
+.scores {
+  font-size: 30px;
+}
+
+#playAgain {
+  color: bisque;
+  border: 2px solid gold;
+  border-radius: 5px;
+  background-color: rgb(129, 11, 11);
+  box-shadow: 1px 1px 10px 2px rgb(255, 4, 4);
+}
+
+#playAgain:hover {
+  border: 2px solid gold;
+  background: linear-gradient(115.87deg, red 100%, black 100%);
+}
+
+
+@media (min-width: 213px) {
+  .welcome {
+    font-size: 22px;
+  }
+
+  .btn-handle {
+    margin-top: 70px;
+    font-size: 30px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: beige;
+    color: rgb(255, 6, 6);
+    box-shadow: 1px 1px 10px 2px rgb(240, 9, 9);
+    border: 2px solid gold;
+
+  }
+
+  .btn-handle:hover {
+    color: beige;
+    border: 1px solid beige;
+  }
+
+  .memory-game {
+    width: 325px;
+    height: 242px;
+  }
+
+  .front-face,
+  .back-face {
+    padding: 5px;
+  }
+
+  #won,
+  #gameover {
+    padding: 15px;
+    top: 50%;
+  }
+
+  .headTag {
+    font-size: 35px;
+  }
+
+  .points>p,
+  #won>h1,
+  #won p,
+  #playAgain {
+    font-size: 25px;
+  }
+
+  .cardgrid {
+    display: flex;
+  }
+
+  .memory-card {
+   
+
+    border: 2px solid gold;
+    box-shadow: 1px 1px 5px 1px rgb(255, 4, 4);
+  }
+
+  .exit {
+    margin-top: 40px;
+    font-size: 20px;
+    padding: 5px 5px;
+    border-radius: 10px;
+    background-color: rgb(129, 11, 11);
+    color: beige;
+    box-shadow: 1px 1px 10px 2px rgb(255, 4, 4);
+    animation-name: btn;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+  }
+
+  address {
+    color: beige;
+    font-size: 20px;
+    margin-top: 155px;
+  }
+}
+
